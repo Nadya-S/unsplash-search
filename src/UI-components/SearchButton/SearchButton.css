@@ -1,0 +1,14 @@
+.search-buton {
+  width: 84px;
+  height: 48px;
+  border: none;
+  border-radius: 12px;
+  background-color: #eb0c0c;
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.search-buton:hover {
+  background-color: #c30000;
+  cursor: pointer;
+}
