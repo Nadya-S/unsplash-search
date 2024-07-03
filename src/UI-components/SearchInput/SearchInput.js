@@ -10,6 +10,7 @@ export const SearchInput = ({ placeholder, onChange, value, clearInput }) => {
         placeholder={placeholder}
         onChange={onChange}
         value={value}
+        required
       ></input>
       <span
         className={value ? "search-input__clear-icon" : ""}
