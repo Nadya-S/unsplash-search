@@ -4,6 +4,7 @@ import { CardList } from "../CardList/CardList";
 import { NotFound } from "../../UI-components/NotFound/NotFound";
 import UnsplashApi from "../../api/UnsplashApi";
 import "./SearchContainer.css";
+import { ImageModal } from "../ImageModal/ImageModal";
 
 export const SearchContainer = () => {
   const [searchText, setSearchText] = useState("");
@@ -12,6 +13,7 @@ export const SearchContainer = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
+  const [selectedImage, setSelectedImage] = useState(null);
   const lastElement = useRef();
   const observer = useRef();
 
@@ -58,6 +60,11 @@ export const SearchContainer = () => {
     }
   }, [page]);
 
+  const handleCloseModal = () => {
+    setSelectedImage(null);
+  };
+  console.log(selectedImage);
+
   return (
     <section
       className={`search-container ${isCenter && "search-container_center"}`}
@@ -72,7 +79,11 @@ export const SearchContainer = () => {
           {data.length ? (
             <>
               <div className="search-container__list">
-                <CardList data={data} isLoading={isLoading} />
+                <CardList
+                  data={data}
+                  isLoading={isLoading}
+                  setSelectedImage={setSelectedImage}
+                />
               </div>
               <div
                 ref={lastElement}
@@ -87,6 +98,7 @@ export const SearchContainer = () => {
           )}
         </>
       )}
+      <ImageModal image={selectedImage} onClose={handleCloseModal} />
     </section>
   );
 };
