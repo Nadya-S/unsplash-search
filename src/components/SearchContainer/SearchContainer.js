@@ -63,7 +63,6 @@ export const SearchContainer = () => {
   const handleCloseModal = () => {
     setSelectedImage(null);
   };
-  console.log(selectedImage);
 
   return (
     <section

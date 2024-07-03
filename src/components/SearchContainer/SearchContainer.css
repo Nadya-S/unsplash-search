@@ -6,12 +6,22 @@
 }
 
 .search-container_center {
-  justify-content: center;
-  height: 100vh;
   align-items: center;
-  margin-top: 0;
+  margin-top: 276px;
 }
 
 .search-container__list {
   width: 100%;
+}
+
+@media screen and (max-width: 690px) {
+  .search-container {
+    margin: 16px;
+  }
+
+  .search-container_center {
+    margin: 0 auto;
+    align-items: center;
+    margin-top: 232px;
+  }
 }

@@ -14,6 +14,7 @@
 .search-input__input {
   width: 420px;
   height: 48px;
+  box-sizing: border-box;
   margin-right: 8px;
   padding: 0 0 0 36px;
   background-color: #eeeeee;
@@ -26,7 +27,7 @@
   position: absolute;
   width: 24px;
   height: 24px;
-  right: 20px;
+  right: 17px;
   margin-top: 12px;
   background: url("../../images/icons/clearInputIcon.svg");
 }
@@ -39,4 +40,10 @@
 
 .search-input::placeholder {
   color: #9c9c9c;
+}
+
+@media screen and (max-width: 540px) {
+  .search-input__input {
+    width: 266px;
+  }
 }
