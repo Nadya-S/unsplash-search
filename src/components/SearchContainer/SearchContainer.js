@@ -65,39 +65,40 @@ export const SearchContainer = () => {
   };
 
   return (
-    <section
-      className={`search-container ${isCenter && "search-container_center"}`}
-    >
+    <>
       <SearchForm
         searchText={searchText}
         setSearchText={setSearchText}
         getCards={getCards}
+        isCenter={isCenter}
       />
-      {!isCenter && (
-        <>
-          {data.length ? (
-            <>
-              <div className="search-container__list">
-                <CardList
-                  data={data}
-                  isLoading={isLoading}
-                  setSelectedImage={setSelectedImage}
+      <section className="search-container">
+        {!isCenter && (
+          <>
+            {data.length ? (
+              <>
+                <div className="search-container__list">
+                  <CardList
+                    data={data}
+                    isLoading={isLoading}
+                    setSelectedImage={setSelectedImage}
+                  />
+                </div>
+                <div
+                  ref={lastElement}
+                  style={{
+                    height: "10px",
+                    width: "100%",
+                  }}
                 />
-              </div>
-              <div
-                ref={lastElement}
-                style={{
-                  height: "10px",
-                  width: "100%",
-                }}
-              />
-            </>
-          ) : (
-            !isLoading && <NotFound />
-          )}
-        </>
-      )}
-      <ImageModal image={selectedImage} onClose={handleCloseModal} />
-    </section>
+              </>
+            ) : (
+              !isLoading && <NotFound />
+            )}
+          </>
+        )}
+        <ImageModal image={selectedImage} onClose={handleCloseModal} />
+      </section>
+    </>
   );
 };

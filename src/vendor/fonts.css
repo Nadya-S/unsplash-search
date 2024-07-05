@@ -3,6 +3,6 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("./fonts/Arial-Regular.woff2") format("woff2"),
-    url("./fonts/Arial-Regular.woff") format("woff");
+  src: url("fonts/Arial-Regular.woff") format("woff"),
+    url("fonts/Arial-Regular.ttf") format("ttf");
 }

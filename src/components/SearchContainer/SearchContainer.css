@@ -1,13 +1,5 @@
 .search-container {
-  margin: 40px 80px 0 80px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.search-container_center {
-  align-items: center;
-  margin-top: 276px;
+  padding: 0 80px;
 }
 
 .search-container__list {
@@ -16,12 +8,6 @@
 
 @media screen and (max-width: 690px) {
   .search-container {
-    margin: 16px;
-  }
-
-  .search-container_center {
-    margin: 0 auto;
-    align-items: center;
-    margin-top: 232px;
+    padding: 0 16px;
   }
 }

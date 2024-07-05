@@ -14,8 +14,8 @@ export const ImageModal = ({ image, onClose }) => {
         ></button>
         {image && (
           <img
-            src={image?.urls.small}
-            alt={image?.alt_description}
+            src={image.urls.regular}
+            alt={image.alt_description}
             className="image-modal__big-image"
           />
         )}

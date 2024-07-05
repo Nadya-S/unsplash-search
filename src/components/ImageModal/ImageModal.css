@@ -8,6 +8,7 @@
   transition: visibility 1s, opacity 1s, transform 1s;
   visibility: hidden;
   opacity: 0;
+  z-index: 2;
 }
 
 .image-modal_opened {
@@ -41,7 +42,7 @@
   object-fit: cover;
 }
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 590px) {
   .image-modal {
     background: rgba(0, 0, 0, 0.5);
   }

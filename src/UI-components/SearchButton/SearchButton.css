@@ -6,8 +6,18 @@
   background-color: #eb0c0c;
   color: #ffffff;
   font-size: 16px;
+  padding: 0;
 }
 
 .search-buton:hover {
   background-color: #c30000;
+}
+
+@media screen and (max-width: 540px) {
+  .search-buton:hover {
+    background-color: #eb0c0c;
+  }
+  .search-buton:focus {
+    background-color: #c30000;
+  }
 }

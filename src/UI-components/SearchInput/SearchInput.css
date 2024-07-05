@@ -33,8 +33,11 @@
 }
 
 .search-input__input:focus {
-  cursor: pointer;
   outline: 0;
+}
+
+.search-input__input:hover {
+  cursor: pointer;
   background-color: #e6e6e6;
 }
 
@@ -42,7 +45,7 @@
   color: #9c9c9c;
 }
 
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 550px) {
   .search-input__input {
     width: 266px;
   }

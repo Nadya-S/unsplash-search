@@ -1,9 +1,14 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { SearchInput } from "../../UI-components/SearchInput/SearchInput";
 import { SearchButton } from "../../UI-components/SearchButton/SearchButton";
 import "./SearchForm.css";
 
-export const SearchForm = ({ searchText, setSearchText, getCards }) => {
+export const SearchForm = ({
+  searchText,
+  setSearchText,
+  getCards,
+  isCenter,
+}) => {
   const [value, setValue] = useState("");
 
   const handleChange = (e) => {
@@ -21,7 +26,7 @@ export const SearchForm = ({ searchText, setSearchText, getCards }) => {
   };
 
   return (
-    <section className="search-form">
+    <section className={`search-form ${isCenter && "search-form_center"}`}>
       <form onSubmit={handleSubmit}>
         <SearchInput
           placeholder={"Телефоны, яблоки, груши..."}
