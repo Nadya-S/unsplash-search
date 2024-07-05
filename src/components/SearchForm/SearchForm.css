@@ -1,5 +1,6 @@
 .search-form {
-  position: fixed;
+  position: sticky;
+  position: -webkit-sticky;
   top: 0;
   text-align: left;
   background-color: white;
@@ -11,7 +12,7 @@
 
 .search-form_center {
   text-align: center;
-  top: 276px;
+  margin-top: 276px;
   padding: 0;
 }
 
@@ -20,7 +21,6 @@
     padding: 10px 16px 16px 16px;
   }
   .search-form_center {
-    top: 232px;
-    position: -webkit-sticky;
+    margin-top: 222px;
   }
 }

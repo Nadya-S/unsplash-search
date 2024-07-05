@@ -1,8 +1,10 @@
 @font-face {
-  font-family: "Arial";
-  src: url(./fonts/Arial-Regular.woff) format("woff"),
+  font-family: "Arial-Regular";
+  src: url(./fonts/Arial-Regular.woff2) format("woff2"),
+    url(./fonts/Arial-Regular.woff) format("woff"),
+    url(./fonts/Arial-Regular.svg) format("svg"),
     url(./fonts/Arial-Regular.ttf) format("truetype");
   font-style: normal;
-  font-weight: 400;
+  font-weight: 900;
   font-display: swap;
 }
