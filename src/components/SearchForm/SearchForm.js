@@ -11,9 +11,14 @@ export const SearchForm = ({
 }) => {
   const [value, setValue] = useState("");
 
+  const handleFocus = (e) => {
+    e.target.focus({ preventScroll: true });
+  };
+
   const handleChange = (e) => {
     setValue(e.target.value);
   };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     if (searchText === value) return;
@@ -33,6 +38,7 @@ export const SearchForm = ({
           value={value}
           onChange={handleChange}
           clearInput={clearInput}
+          handleFocus={handleFocus}
         />
         <SearchButton />
       </form>

@@ -60,17 +60,6 @@ export const SearchContainer = () => {
     }
   }, [page]);
 
-  useEffect(() => {
-    const handlePreventDefault = (e) => {
-      e.preventDefault();
-    };
-    if (isCenter) {
-      document.addEventListener("touchmove", handlePreventDefault);
-    } else {
-      document.removeEventListener("touchmove", handlePreventDefault);
-    }
-  }, [isCenter]);
-
   const handleCloseModal = () => {
     setSelectedImage(null);
   };

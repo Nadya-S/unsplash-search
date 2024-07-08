@@ -1,6 +1,12 @@
 import "./SearchInput.css";
 
-export const SearchInput = ({ placeholder, onChange, value, clearInput }) => {
+export const SearchInput = ({
+  placeholder,
+  onChange,
+  value,
+  clearInput,
+  handleFocus,
+}) => {
   return (
     <div className="search-input">
       <span className="search-input__search-icon"></span>
@@ -10,6 +16,7 @@ export const SearchInput = ({ placeholder, onChange, value, clearInput }) => {
         placeholder={placeholder}
         onChange={onChange}
         value={value}
+        onFocus={handleFocus}
         required
       ></input>
       <span
