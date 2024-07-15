@@ -6,6 +6,7 @@ import "./SearchForm.css";
 export const SearchForm = ({
   searchText,
   setSearchText,
+  setPage,
   getCards,
   isCenter,
 }) => {
@@ -22,8 +23,9 @@ export const SearchForm = ({
   const handleSubmit = (e) => {
     e.preventDefault();
     if (searchText === value) return;
+    setPage(1);
     setSearchText(value);
-    getCards(value);
+    getCards(value, 1);
   };
 
   const clearInput = () => {

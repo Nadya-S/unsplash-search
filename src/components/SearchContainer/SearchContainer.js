@@ -32,11 +32,11 @@ export const SearchContainer = () => {
     }
   }, [isCenter, data.length]);
 
-  const getCards = (text) => {
+  const getCards = (text, pageNumber) => {
     setIsCenter(false);
     setIsLoading(true);
     if (text !== searchText) {
-      UnsplashApi.getCards(text, page)
+      UnsplashApi.getCards(text, pageNumber)
         .then((res) => {
           setData([...res.results]);
           setTotalPages(res.total_pages);
@@ -44,7 +44,7 @@ export const SearchContainer = () => {
         })
         .catch((err) => console.error(err));
     } else {
-      UnsplashApi.getCards(text, page)
+      UnsplashApi.getCards(text, pageNumber)
         .then((res) => {
           setData([...data, ...res.results]);
           setTotalPages(res.total_pages);
@@ -71,6 +71,7 @@ export const SearchContainer = () => {
         setSearchText={setSearchText}
         getCards={getCards}
         isCenter={isCenter}
+        setPage={setPage}
       />
       <section className="search-container">
         {!isCenter && (
